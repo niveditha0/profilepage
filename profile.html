@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
+            <div class="personal_information_container">
+              <div class="kmt-profile__subtitle">
+                <h5>Personal Information</h5>
+              </div>
+              <div class="form-group">
+                <label for="Firstname">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Firstname"
+                  placeholder="First Name"
+                  name="fristname"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Lastname"
+                  placeholder="Last Name"
+                  name="lastname"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone_no">Phone number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="Phone_NO"
+                  placeholder="Phone number"
+                  name="phone number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="kmt-profile__cbx-container">
+                <span>Communication Preferences</span>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="email" /> Email</label>
+                  <label><input type="checkbox" name="text" /> Text</label>
+                  <label
+                    ><input type="checkbox" name="phonenumber" /> Phone
+                    number</label
+                  >
+                </div>
+              </div>
+              <div class="kmt-profile__cbx-container">
+                <span>Marketing Emails</span>
+                <div class="checkbox">
+                  <label
+                    ><input type="checkbox" name="signup" />Sign up for emails
+                    and Marketing</label
+                  >
+                </div>
+              </div>
+              <div class="kmt-profile__actions">
+                <button
+                  type="submit"
+                  class="btn btn-warning btn-block js-btn-validation"
+                >
+                  Update Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well">
+            <div class="kmt-profile__active_container">
+              <div class="kmt-profile__subtitle">
+                <h5>Active Sold-To</h5>
+              </div>
+              <div class="kmt-profile__soldto-container">
+                <div class="info">
+                  <p>Account # 0070000545</p>
+                  <p>UNITED CENTRAL SUPPLY - CHAPMANVILLE WHSE 33</p>
+                  <p>150 GARRETT FORK ROAD</p>
+                  <p>CHAPMANVILLE, WV 25508</p>
+                </div>
+                <div class="actions">
+                  <a
+                    href="/store/us/en/kmt/my-account/select-sold-to"
+                    class="btn btn-primary btn-block"
+                  >
+                    Change Sold-To</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <div class="kmt-profile__company wrapper">
+              <div class="kmt-profile__subtitle">
+                <h5>Company Information</h5>
+              </div>
+              <div class="kmt-profile__company-container">
+                <div>
+                  <span class="title">Account Type</span>
+                  <p>Business</p>
+                </div>
+
+                <div>
+                  <span class="title">Company Name</span>
+                  <p>PRAGER GMBH ZERSPANUNGS- UND WERKZEUGTECHNIK</p>
+                </div>
+
+                <div>
+                  <span class="title">Industry</span>
+                </div>
+
+                <div>
+                  <span class="title">Role</span>
+                  <p>b2bcustomergroup</p>
+                </div>
+              </div>
+              <div class="kmt-profile__company-contact">
+                <p>Need to update your Company Information?</p>
+                <p>Contact Customer Service at</p>
+                <p>800-446-7738</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="well">
+                <div
+                  class="ktm-profile__inner-container preferences b2b-customer-true"
+                >
+                  <div class="kmt-profile__info wrapper">
+                    <div class="kmt-profile__subtitle">
+                      <h5>Preferences</h5>
+                    </div>
+                    <form
+                      id="updateProfilePreferencesForm"
+                      class="validation-form js-validation-form"
+                      action="update-profile-preferences"
+                      method="post"
+                      novalidate="novalidate"
+                    >
+                      <span class="title">Catalog</span>
+                      <select
+                        id="profile.catalogOption"
+                        name="catalogOption"
+                        labelkey="label.updateProfile.page.catalog"
+                        class="form-control valid"
+                        aria-invalid="false"
+                      >
+                        <option value="ISO">ISO</option>
+                        <option value="ANSI" selected="selected">
+                          ANSI
+                        </option></select
+                      ><span class="title">Decimal Notation</span>
+                      <select
+                        id="profile.numberFormatOption"
+                        name="numberFormatOption"
+                        labelkey="label.updateProfile.page.numberformat"
+                        class="form-control valid"
+                        aria-invalid="false"
+                      >
+                        <option value="Comma">Comma</option>
+                        <option value="Periods" selected="selected">
+                          Periods
+                        </option>
+                      </select>
+                      <div class="kmt-profile__actions">
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-block js-btn-validation"
+                        >
+                          Update Preferences
+                        </button>
+                      </div>
+                      <div>
+                        <input
+                          type="hidden"
+                          name="CSRFToken"
+                          value="205a90d1-f2a9-4f5b-b254-50210961f7e9"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
